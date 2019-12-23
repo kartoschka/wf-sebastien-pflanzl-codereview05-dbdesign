@@ -10,6 +10,12 @@
     show foreign key relationships and try and verify the design sketched out in
     `er-diagram.pdf` and `draft.md`.
   - `queries.sql`: sample queries with comments describing what they do
+  - `carrental-2_all-tables-populated.dump.sql`: final dump containing all the
+    test data
+  - `table-data-report.txt`: simply lists the contents of all tables with their test
+    data using `select *`
+  - `table-structure-report.txt`: like `...data-report.txt` with `show create
+    table ...` instead of `select * ...`
 
 # work-in-progress files
 

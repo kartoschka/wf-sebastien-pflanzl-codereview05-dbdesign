@@ -1,0 +1,235 @@
++--------------------------------------------------+
+| Tables_in_codereview_sebastien_pflanzl_carrental |
++--------------------------------------------------+
+| car_model                                        |
+| car_object                                       |
+| check_in                                         |
+| check_out                                        |
+| customer                                         |
+| employee                                         |
+| issue                                            |
+| reservation                                      |
+| shop                                             |
+| web_user                                         |
++--------------------------------------------------+
+
+## WEB_USER
+
++-----------------+-----------------------------------------+----------------+-------------+
+| name            | email                                   | dummy_password | customer_id |
++-----------------+-----------------------------------------+----------------+-------------+
+| autofan42       | brummbrumm@bmx.de                       | password       |           5 |
+| blumenwiese7    | amaliadiegrosse@gmail.ch                | bleibweg       |          12 |
+| entsafter-no1   | qualitaetsentsaftermiefzimmer@gmail.com | jetztkaufen    |          14 |
+| kerstinistcool  | kerstinistdiebeste@gmail.com            | kerstin        |          15 |
+| masterofdisaste | deinlieblingspjotr@fmail.de             | perswert       |           7 |
+| michelvaillant  | michel@michelin.fr                      | 0000000        |           9 |
+| schmalzlocke    | heyda@gmx.at                            | 7654           |           3 |
+| sexyhexy777     | sexy@hexy.at                            | 1234           |           1 |
+| siebensachen    | megageil@email.com                      | passwort       |           6 |
+| ultimarkus      | ultimatemarkus@markus.markus            | yes            |          11 |
++-----------------+-----------------------------------------+----------------+-------------+
+
+## CUSTOMER
+
++----+------------+---------------+-------------+-------------------------+----------------+-------------+-------------+
+| id | first_name | last_name     | telephone   | street                  | town           | postal_code | country     |
++----+------------+---------------+-------------+-------------------------+----------------+-------------+-------------+
+|  1 | Bronko     | Borkendork    | 8098890234  | Lange Straße 3          | Kleindorf      | 3423        | Österreich  |
+|  2 | Fritz      | Witzmann      | 23849203    | Kurze Straße 7          | Kleindorf      | 3423        | Österreich  |
+|  3 | Aurelia    | Grashüpfer    | 23890412    | Mittellange Straße 15   | Großdorf       | 3300        | Österreich  |
+|  4 | Plonk      | Honk          | 19248910    | Superkurze Straße 1     | Mitteldorf     | 4444        | Österreich  |
+|  5 | Friedrich  | Schmiependiep | 12940128409 | Meeresgrund 3           | Knork          | 12940       | Deutschland |
+|  6 | Peter      | Horgentorg    | 2398042     | Holzkopfgasse 10        | Knork          | 12940       | Deutschland |
+|  7 | Pjotr      | Hergenberg    | 238439023   | Holztopfgasse 11        | Knork          | 12940       | Deutschland |
+|  8 | Grieskoch  | Weizmann      | 1248109248  | Hauptstraße 7           | Zwei Berge     | 24324       | Deutschland |
+|  9 | Filzlaus   | Schmelzkäse   | 2348293     | Hauptstraße 8           | Zwei Berge     | 24324       | Deutschland |
+| 10 | Korinna    | Korinthenkalk | 12903401    | Koksberggasse 9         | Krakenkopf     | 58883       | Deutschland |
+| 11 | Markus     | Markowitsch   | 12841910    | Kistenhaufen 7          | Hinterdorf     | 1294        | Schweiz     |
+| 12 | Amalia     | Fatalia       | 23852093    | Oberstube 123           | Oberkatzenbaum | 8934        | Schweiz     |
+| 13 | Thomas     | Aderlass      | 2942191248  | Letzter Weg 77          | Oberkatzenbaum | 8934        | Schweiz     |
+| 14 | Matthias   | Miefzimmer    | 23849124    | Letzter Weg 79          | Oberkatzenbaum | 8934        | Schweiz     |
+| 15 | Kerstin    | Alteshaus     | 1289401284  | Mittwegstraßengasse 30  | Oberkatzenbaum | 8934        | Schweiz     |
++----+------------+---------------+-------------+-------------------------+----------------+-------------+-------------+
+
+## CAR_MODEL
+
++----+-------------+--------------------------------+
+| id | maker       | model_name                     |
++----+-------------+--------------------------------+
+|  1 | Phord       | Phieszda 7                     |
+|  2 | Phord       | Phieszda 8                     |
+|  3 | Merkedes    | OberklasseT                    |
+|  4 | Merkedes    | 10                             |
+|  5 | Merkedes    | Merk 1                         |
+|  6 | Metalmaster | 7000                           |
+|  7 | Metalmaster | 8000                           |
+|  8 | Metalmaster | Doomslayer                     |
+|  9 | Metalmaster | Doomslayer 666 premium         |
+| 10 | Dyson       | Staubsaugomobil 1              |
+| 11 | Melitta     | Kaffemaschinomobil 3plus       |
+| 14 | Melitta     | Kaffemaschinomobil 3plus latte |
++----+-------------+--------------------------------+
+
+## CAR_OBJECT
+
++----+----------------------+---------------------------------------------------------------------+-------------+----------+
+| id | color                | condition_desc                                                      | location_id | model_id |
++----+----------------------+---------------------------------------------------------------------+-------------+----------+
+|  2 | schimmelgrün         | alles super toll                                                    |           2 |       14 |
+|  3 | schimmelgelb         | bester zustand 10/10                                                |           2 |       14 |
+|  4 | schimmelschwarz      | kratzer auf der linken seite an der vordertür                       |           2 |       11 |
+|  5 | nachtschwarz         | epische narben von der schlacht sonst alles ok                      |           1 |        6 |
+|  6 | kohlrabenschwarz     | legendäre narben von der schlacht sonst alles ok                    |           1 |        6 |
+|  7 | schwarzwiemeineseele | unsterbliche narben von der schlacht sonst alles ok                 |           1 |        7 |
+|  8 | episch-pink          | supercoole narben von der schlacht sonst alles ok                   |           1 |        8 |
+|  9 | gelb                 | irgendwer hat hinten in den sitz gekotzt wer macht das sauber fuck  |           1 |        1 |
+| 10 | gelb                 | nullo problemo                                                      |           1 |        1 |
+| 11 | gelb                 | es ist eigentlich mein auto aber die firma tut so als wär es ihres  |           2 |        2 |
+| 12 | gelb                 | Maria bitte geh mit mir mal essen!                                  |           2 |        2 |
+| 13 | graugrün             | Überall bisschen zerkratzt, der machts nicht mehr lang.             |           2 |        3 |
+| 14 | altrosa              | Pikobello                                                           |           2 |        4 |
+| 15 | altrosa              | Pikobellissimo                                                      |           2 |        4 |
+| 16 | pornogold            | alles supa dupa                                                     |           3 |        3 |
+| 17 | pornosilber          | alles pipifein                                                      |           3 |        3 |
+| 18 | pornopink            | motor fehlt                                                         |           3 |        3 |
+| 19 | grau                 | kofferraum lässt sich nicht ordentlich schließen                    |           3 |        5 |
+| 20 | grau                 | staubsaugerfunktion ist defekt                                      |           3 |       10 |
+| 21 | graugrün             | staubsaugermodus lässt sich nicht abschalten                        |           3 |       10 |
+| 22 | silbergrau           | schleudert den staub zu heftig aus der luft                         |           3 |       10 |
+| 23 | silbergrau           | der kaffee kommt nur kalt raus                                      |           4 |       11 |
+| 24 | altweiß              | exzellent                                                           |           4 |       11 |
+| 25 | altweiß              | der kaffee ist zu heiß                                              |           4 |       11 |
+| 26 | altgelb              | nummernschild vorne stimmt nicht überein mit nummernschild hinten   |           4 |        2 |
+| 27 | hellgelb             | passt                                                               |           5 |        2 |
+| 28 | gelb                 | passt                                                               |           5 |        2 |
+| 29 | gelb                 | passt                                                               |           5 |        2 |
+| 30 | gelb                 | passt                                                               |           5 |        2 |
+| 31 | gelb                 | passt                                                               |           5 |        2 |
+| 32 | schwarzgrau          | radio spielt nur cradle of filth                                    |           5 |        8 |
+| 33 | schwarzgrau          | radio spielt nur mastodon                                           |           5 |        8 |
+| 34 | silbergrau           | radio spielt nur shakira                                            |           5 |        8 |
++----+----------------------+---------------------------------------------------------------------+-------------+----------+
+
+## SHOP
+
++----+-----------------------+
+| id | street                |
++----+-----------------------+
+|  1 | Siebensachenstraße 7  |
+|  2 | Oktogoniengasse 88    |
+|  3 | Dodekallee 12         |
+|  4 | Quadratweg 64         |
+|  5 | Polygoniensteig 123   |
++----+-----------------------+
+
+## EMPLOYEE
+
++----+-------------+----------------+---------+
+| id | first_name  | last_name      | shop_id |
++----+-------------+----------------+---------+
+|  1 | Hubert      | Schubert       |       1 |
+|  2 | Herbert     | Schegert       |       1 |
+|  3 | Hildegard   | Hart           |       1 |
+|  4 | Diego       | Popowitsch     |       2 |
+|  5 | Akira       | Müller         |       2 |
+|  6 | Lisa        | Kratzbaum      |       2 |
+|  7 | Selaginella | Helvetika      |       2 |
+|  8 | Ingeborg    | Weitgereist    |       3 |
+|  9 | Filius      | Mater          |       3 |
+| 10 | Samson      | Kaminaga       |       4 |
+| 11 | Jette       | Kuul           |       4 |
+| 12 | Simon       | Simerich       |       4 |
+| 13 | Gaston      | LeCretin       |       4 |
+| 14 | Mariborg    | Borgolov       |       4 |
+| 15 | Sauron      | von Düsternis  |       5 |
+| 16 | Frodo       | Beutelchen     |       5 |
+| 17 | Thorus      | Thorwächter    |       5 |
++----+-------------+----------------+---------+
+
+## RESERVATION
+
++----+------------+------------+-----------------+--------+-------------+-----------+---------+
+| id | from_date  | to_date    | flexible_return | fee    | customer_id | object_id | shop_id |
++----+------------+------------+-----------------+--------+-------------+-----------+---------+
+| 18 | 2007-05-06 | 2007-05-09 |               0 |  80.00 |           2 |        10 |       1 |
+| 19 | 2007-10-07 | 2007-10-10 |               0 |  90.00 |           4 |         5 |       3 |
+| 20 | 2007-05-10 | 2007-05-20 |               1 | 270.00 |           1 |         6 |       3 |
+| 21 | 2007-06-01 | 2007-06-07 |               0 | 130.00 |           6 |        10 |       2 |
+| 22 | 2008-01-02 | 2008-01-06 |               1 |  70.00 |           1 |         6 |       3 |
+| 23 | 2007-11-07 | 2007-11-15 |               0 | 170.00 |           9 |        19 |       4 |
+| 24 | 2007-12-24 | 2007-12-30 |               0 | 100.00 |           9 |        19 |       4 |
+| 25 | 2008-02-16 | 2008-02-18 |               1 |  70.00 |          11 |         7 |       1 |
+| 26 | 2008-05-05 | 2008-05-06 |               0 |  55.00 |          12 |        30 |       1 |
+| 27 | 2008-04-04 | 2008-04-07 |               1 | 110.00 |          11 |         7 |       2 |
+| 28 | 2008-07-12 | 2008-07-17 |               0 | 140.00 |           7 |        29 |       5 |
+| 29 | 2008-07-20 | 2008-07-21 |               0 |  40.00 |           7 |        29 |       5 |
+| 30 | 2008-11-03 | 2008-11-04 |               0 |  45.00 |           6 |        10 |       2 |
+| 31 | 2008-10-02 | 2008-10-10 |               0 | 140.00 |           2 |        34 |       2 |
+| 32 | 2009-02-10 | 2009-02-11 |               0 |  55.00 |           8 |        33 |       3 |
+| 33 | 2009-01-09 | 2009-01-19 |               1 | 310.00 |          14 |        10 |       5 |
+| 34 | 2009-01-17 | 2009-01-22 |               0 | 120.00 |          11 |        10 |       4 |
+| 35 | 2008-12-31 | 2009-01-10 |               1 | 320.00 |           3 |        10 |       3 |
+| 36 | 2009-04-01 | 2009-04-01 |               1 |  40.00 |          15 |         4 |       1 |
+| 37 | 2009-07-07 | 2009-07-20 |               1 | 370.00 |           7 |         3 |       1 |
++----+------------+------------+-----------------+--------+-------------+-----------+---------+
+
+## CHECK_IN
+
++----+-------------------------+----------------+-------------+
+| id | passport_number         | licence_number | employee_id |
++----+-------------------------+----------------+-------------+
+| 18 | ABC123HELLOGOODBYE77789 | 2770745345     |           2 |
+| 20 | XZYZ89352304JBLUBBFISCH | 5398023235     |           9 |
+| 21 | GSK8933ALLURBAESAREBEL7 | 8953240000     |           4 |
+| 22 | XZYZ89352304JBLUBBFISCH | 5398023235     |           8 |
+| 25 | JFS898SIMSALABIM8987777 | 1231535532     |           3 |
+| 26 | AAA8923KATZENKARTONAGE8 | 9990033005     |           2 |
+| 27 | JFS898SIMSALABIM8987777 | 1231535532     |           6 |
+| 28 | XXX28934BITTEGERNE83042 | 0902399093     |          17 |
+| 29 | XXX28934BITTEGERNE83042 | 0902399093     |          17 |
+| 30 | GSK8933ALLURBAESAREBEL7 | 8953240000     |           4 |
+| 32 | JEDI80942348YODAGESICHT | 1010101099     |           9 |
+| 33 | SXJ893HERSTOIDA8234JKJL | 7777733232     |          16 |
+| 34 | JFS898SIMSALABIM8987777 | 1231535533     |          11 |
+| 36 | VVV1093REGENTAG898NEBEL | 8291412894     |           1 |
+| 37 | XXX28934BITTEGERNE83042 | 0902399094     |           1 |
++----+-------------------------+----------------+-------------+
+
+## CHECK_OUT
+
++----+------------+---------+-------------+
+| id | date       | shop_id | employee_id |
++----+------------+---------+-------------+
+| 18 | 2007-05-09 |       1 |           3 |
+| 20 | 2007-05-20 |       1 |           2 |
+| 21 | 2007-06-07 |       2 |           5 |
+| 22 | 2008-01-07 |       3 |           8 |
+| 25 | 2008-02-18 |       2 |           4 |
+| 27 | 2008-04-06 |       3 |           8 |
+| 28 | 2008-07-15 |       5 |          16 |
+| 29 | 2008-07-21 |       4 |          10 |
+| 30 | 2008-11-06 |       4 |          10 |
+| 32 | 2009-02-10 |       4 |          13 |
+| 33 | 2009-01-15 |       5 |          15 |
+| 34 | 2009-01-22 |       1 |           3 |
+| 37 | 2009-07-19 |       3 |           9 |
++----+------------+---------+-------------+
+
+## ISSUE
+
++----+----------------------------------------+------------------------------------------------+--------+-----------+--------------+
+| id | title                                  | description                                    | fee    | state     | check_out_id |
++----+----------------------------------------+------------------------------------------------+--------+-----------+--------------+
+|  1 | fluxkapazitator verdreht               | NULL                                           |  37.90 | paid      |           18 |
+|  2 | deckel für quantenverschränker fehlt   | NULL                                           |  33.90 | paid      |           18 |
+|  3 | is kratzer                             | riesen kratzer rechts an der tür oida vorne    |  17.90 | paid      |           21 |
+|  4 | delle                                  | mega delle bei motor haube scheisse man        |  22.50 | paid      |           21 |
+|  5 | duftbaum verschwunden                  | war mein lieblingsduft                         |   5.25 | contested |           27 |
+|  6 | polsterbezug weg                       | gute qualität                                  |   7.50 | contested |           27 |
+|  7 | anderer motor eingebaut                | ???                                            | 550.00 | contested |           28 |
+|  8 | katze im kofferraum gefunden (lebend)  | NULL                                           |   NULL | agreed    |           30 |
+|  9 | neu lackiert (ur schiarch)             | NULL                                           | 120.00 | agreed    |           33 |
+| 10 | komischer geruch                       | is wie von alten socken oder faules ei oder so |  40.00 | paid      |           34 |
++----+----------------------------------------+------------------------------------------------+--------+-----------+--------------+
+
