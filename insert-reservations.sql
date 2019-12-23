@@ -1,5 +1,4 @@
--- id, from-date, to-date, flex?, custID, objID, shopID
-
+-- id, from-date, to-date, flex?, fee, custID, objID, shopID
 insert into reservation values
   (null, '2007-05-06', '2007-05-09', false,  80,  2, 10, 1),
   (null, '2007-10-07', '2007-10-10', false,  90,  4,  5, 3),
@@ -21,7 +20,3 @@ insert into reservation values
   (null, '2008-12-31', '2009-01-10', true , 320,  3, 10, 3),
   (null, '2009-04-01', '2009-04-01', true ,  40, 15,  4, 1),
   (null, '2009-07-07', '2009-07-20', true , 370,  7,  3, 1);
-
--- id, date, passnum, licencenum, empid
-insert into checkin values
-  ()
