@@ -16,3 +16,8 @@ FILES
     a diagram automatically created from the database dump using dbdiagram.io to
     show foreign key relationships and try and verify the design sketched out in
     `er-diagram.pdf` and `draft.md`.
+  - `carrental-1_before-adding-reservations.dump.sql`: some adjustments to table
+    structure after `carrental-db...` files (but nothing relevant to the entity
+    diagrams); sample data has been added except `reservation -> checkin -> checkout ->
+    issue`
+  - `queries.sql`: sample queries with comments describing what they do
